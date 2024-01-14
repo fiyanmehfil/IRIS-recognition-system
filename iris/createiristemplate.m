@@ -17,7 +17,7 @@ function [template, mask] = createiristemplate(eyeimage_filename)
 % path for writing diagnostic images
 global DIAGPATH
 % fname = 'set_one';
-DIAGPATH = 'F:\project\irisRecognition-master\';
+DIAGPATH = 'F:\project\iris\';
 
 %normalisation parameters
 radial_res = 20;
