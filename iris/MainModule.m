@@ -25,21 +25,6 @@ drawnow; pause(0.05);
 [image] = imgetfile;
 [template,mask] = createiristemplate(image);
 
-get(0,'DefaultUicontrolBackgroundColor');
-set(0,'DefaultUicontrolBackgroundColor','[0.75, 0.75, 0.75]')
-d1 = questdlg('PLEASE SELECT THE IRIS IMAGE FROM THE DATABASE (JPEG FORMAT)!', ...
-                   'WELCOME TO IRIS RECOGNITION SYSTEM!', ...
-                   'OK','Cancel','OK');
- switch d1
-     
-  case 'OK'
-      
-% uiwait(d1);
-drawnow; pause(0.05);
-
-[image1] = imgetfile;
-[template1,mask1] = createiristemplate(image1);
-
 % msgbox (sprintf ( 'A =% 2.3g \ nB =% 2.3g' , A, B), 'AB' )
 hd = gethammingdistance (template, mask, template1, mask1);
 matching_quotient = 1-hd;
@@ -48,26 +33,11 @@ h = msgbox(sprintf('MATCH FOUND! \nHD VALUE =% 2.3g AND MATCHING QUOTIENT =% 2.3
 set(h, 'position', [400 300 220 100]); %makes box bigger
 fprintf('HD value --- %f \n',hd);
 fprintf('matching  value --- %f \n',matching_quotient);
-
-else
-h1 = msgbox(sprintf('MATCH NOT FOUND! \nHD VALUE =% 2.3g AND MATCHING QUOTIENT =% 2.3g' , hd ,matching_quotient), 'FAILED');
-set(h1, 'position', [400 300 220 100]); %makes box bigger
-%fprintf('HD value --- %f \n',hd);
-end
  end
 end
 
 case 'Train System'
      
-    get(0,'DefaultUicontrolBackgroundColor');
-    set(0,'DefaultUicontrolBackgroundColor','[0.75, 0.75, 0.75]')
-    d2 = questdlg('PLEASE SELECT THE FOLDER CONTAINING IRIS IMAGE!', ...
-                   'WELCOME TO IRIS RECOGNITION SYSTEM!', ...
-                   'OK','Cancel','OK');
-
-switch d2
-    case 'OK'
-% uiwait(d2);
 TrainSystem();
 end
 end
