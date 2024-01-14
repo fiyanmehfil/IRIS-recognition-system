@@ -6,7 +6,7 @@ format longg;
 format compact;
 
 % Define a starting folder
-start_path =  fullfile(matlabroot, 'F:\project\irisRecognition-master\');
+start_path =  fullfile(matlabroot, 'F:\project\iris\');
 % Ask user to confirm or change
 startFolder =  uigetdir(start_path);
 if startFolder == 0
