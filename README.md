@@ -1,4 +1,5 @@
-# IRIS-recognition-system
+# IriScan
+## IRIS-recognition-system
 
 ## Overview
 This repository presents an iris recognition system designed for accurate and secure user authentication. Leveraging Daughman's Algorithm, the system processes iris images to identify unique patterns. Techniques such as segmentation, normalization, convolution encoding, and Hamming distance computation contribute to the precision of the recognition process.
